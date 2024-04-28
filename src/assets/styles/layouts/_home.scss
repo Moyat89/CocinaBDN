@@ -310,6 +310,17 @@ body:has(form) {
   }
 }
 
+.msg{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 364px;
+  padding: 24px;
+  background: black;
+  color: white; 
+}
+
 @media only screen and (min-width: $big-dev-min-width) {
 
   h2 {
