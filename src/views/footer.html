@@ -24,7 +24,7 @@
     var currentPage = window.location.pathname;
     var pages = document.querySelectorAll('.links a');
     pages.forEach(function (link) {
-      if ("/"+link.getAttribute('href') === currentPage) {
+      if (link.getAttribute('href') === currentPage) {
         link.classList.add('current');
       }
     });
