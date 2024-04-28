@@ -1,3 +1,32 @@
-<footer class="uoc-footer">
-    &copy; Universitat Oberta de Catalunya
+<footer>
+  <div class="contact-info">
+    <p>¡Inscripciones abiertas!<br>Inscribete a través de nuestro <a href="./inscripcion.html">formulario</a> o envia un e-mail a <a href="#" target="_blank">mejorpaella@bdn.com</a> para participar</p>
+  </div>
+  <div class="nav-bar-bottom">
+    <div class="nested-bar">
+    <img class="logo" src="./assets/images/badalona-logo.webp" />
+    <div class="links">
+      <a href="./index.html">Portada</a>
+      <a href="./chefs.html">Maestros Paelleros</a>
+      <a href="./articulo.html">La Tradición</a>
+      <a href="./inscripcion.html">Inscripción</a>
+    </div>
+    <div class="social-media">
+      <a href="#" title="Link a cuenta en Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="#" title="Link a cuenta en Twitter"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" title="Link a cuenta en Facebook"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    </div>
+  </div>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var currentPage = window.location.pathname;
+    var pages = document.querySelectorAll('.links a');
+    pages.forEach(function (link) {
+      if ("/"+link.getAttribute('href') === currentPage) {
+        link.classList.add('current');
+      }
+    });
+  });
+</script>

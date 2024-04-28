@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Fiestas Badalona - Inscríbete</title>
+</head>
+
+<body>
+    <include src="./views/header.html"></include>
+    <main class="container">
+        <h2>Apúntate!</h2>
+
+        <form name="inscripcion" method="POST" data-netlify="true">
+            <div class="form-row">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required/>
+            </div>
+            <div class="form-row">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required/>
+            </div>
+            <div class="form-row">
+                <label for="tipo_paella">Tipo de paella:</label>
+                <select id="tipo_paella" name="tipo_paella" required>
+                    <option value="" disabled selected>Elige tu tipo de paella</option>
+                    <option value="val">Valenciana</option>
+                    <option value="mar">Mar</option>
+                    <option value="mon">Montaña</option>
+                    <option value="mixta">Mixta</option>
+                    <option value="otra">Otra</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="dia_concurso">Día del concurso:</label>
+                <select id="dia_concurso" name="dia_concurso" required>
+                    <option value="" disabled selected>Elige tu dia</option>
+                    <option value="vie">Viernes</option>
+                    <option value="sat">Sábado</option>
+                    <option value="dom">Domingo</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <button type="submit">Inscribirse</button>
+            </div>
+        </form>
+
+
+    </main>
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
+</html>
