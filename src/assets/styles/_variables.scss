@@ -9,15 +9,20 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 $primary-color: rgb(255, 241, 1);
 $background-color: #111111;
 
-// Color del Scroll
-$scroll-color: $primary-color $background-color;
-
 // Tamaños de la fuente para la versión para móviles
-$font-size-responsive: 0.8rem;
+$font-size-responsive: 1rem;
 
 // Tamaños de la fuente para la versión para dispositivos grandes
-$font-size-big: 1.2rem;
-$font-size-med: 1rem;
+$font-size-med: 1.2rem;
+$font-size-big: 1.4rem;
+
+//Márgenes
+$margin-size-small: 10px;
+$margin-size-medium: 20px;
+$margin-auto: auto 0;
+$padding-size-small: 2vw;
+$padding-size-medium: 1vw;
+
 
 // Border standard a utilizar
 $standard-border: rgb(255, 241, 1) solid 2px;
@@ -25,7 +30,7 @@ $standard-border: rgb(255, 241, 1) solid 2px;
 // Tamaños generales
 $full-height: 100vh;
 $full-width: 100vw;
-$height-header-responsive: 20vh;
+$height-header-responsive: 10vh;
 $height-nav-big: $height-header-responsive - 10vh;
 $med-dev-min-width: 571px;
 $big-dev-min-width: 992px;
