@@ -31,6 +31,7 @@ a {
 }
 
 a:hover {
+  color: $primary-color-lch;
   color: $primary-color;
 }
 
@@ -58,16 +59,21 @@ h2 {
   }
 }
 
-hr{
-  color:$primary-color;
+hr {
+  color: $primary-color-lch;
+  color: $primary-color;
   margin: auto;
   opacity: 1;
 
 }
 
+$input-border-color: $primary-color-lch;
 $input-border-color: $primary-color;
+
+
 //Shared Custom Classes
 .current {
+  color: $primary-color-lch;
   color: $primary-color;
 }
 
@@ -81,21 +87,18 @@ $input-border-color: $primary-color;
   }
 }
 
-.logo {
-  margin: auto 0;
-  height: 40px;
-}
-
 //Header and Bottom
 
 //Header (top Bar)
-header {
+nav {
   padding: 0 $padding-size-small 0 $padding-size-small;
   min-height: $height-header-responsive;
   display: flex;
   background-color: $background-color;
 
+
   @media(min-width: $med-dev-min-width) {
+    
     padding: 0 $padding-size-medium 0 $padding-size-medium;
     grid-template-columns: 2fr 0fr 2fr;
     height: max-content;
@@ -111,20 +114,17 @@ header {
     padding-right: 10vw;
     height: 10vh;
 
+    a{
+      text-shadow: $main-txt-shadow;
+
+    }
+
     .links {
       column-gap: 50px;
       padding-left: initial;
 
-      .lindex {
-        visibility: hidden;
-      }
-
       a {
         padding: 0;
-        text-shadow:
-          2px 2px 2px rgba(0, 0, 0, 0.5),
-          -2px -2px 2px rgba(0, 0, 0, 0.5),
-          0 0 2px rgba(0, 0, 0, 1);
         flex: none;
       }
     }
@@ -154,12 +154,38 @@ header {
 }
 
 
+.navbar-brand {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-size: $font-size-responsive;
+  margin: auto 0;
+  color: white;
+
+  &:hover {
+    color: $primary-color-lch;
+    color: $primary-color;
+  }
+
+
+  @media(min-width: $med-dev-min-width) {
+    font-size: $font-size-med;
+
+  }
+
+  @media(min-width: $big-dev-min-width) {
+    font-size: 1.6rem;
+
+
+  }
+}
+
+
 //Footer
 
 footer {
   background-color: $background-color;
 
-  hr{
+  hr {
     height: 1vh;
     visibility: hidden;
   }
@@ -211,7 +237,7 @@ footer {
 
   @media(min-width: $big-dev-min-width) {
 
-    hr{
+    hr {
       margin: auto 10vw auto 10vw;
       visibility: visible;
     }
@@ -249,6 +275,14 @@ footer {
 
   display: flex;
   flex-direction: column;
+
+  nav{
+    @media(min-width: $med-dev-min-width) {
+      background-color: transparent;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    }
+
+  }
 
 
   main {
@@ -404,8 +438,8 @@ footer {
   margin-top: 0;
 
 
-  :where(.entradilla,section:has(ol)) *{
-      padding: 10px 20px;
+  :where(.entradilla, section:has(ol)) * {
+    padding: 10px 20px;
   }
 
   .entradilla {
@@ -450,6 +484,7 @@ footer {
               display: inline-block;
               width: 30px;
               height: 30px;
+              background-color: $primary-color-lch;
               background-color: $primary-color;
               border-radius: 50%;
               border: 2px $background-color solid;
@@ -486,9 +521,11 @@ footer {
       padding-top: 10px;
       padding-bottom: 10px;
     }
-    :is(.lista) h3,p{
+
+    :is(.lista) h3,
+    p {
       text-align: left;
-  }
+    }
 
   }
 }
@@ -519,20 +556,23 @@ body:has(form) {
     }
 
     .form-check-input,
-    .form-control{
+    .form-control {
       width: 75vw;
       height: 40px;
 
-      &:focus{
+      &:focus {
+        border: $primary-color-lch;
         border: $primary-color;
-        box-shadow: 0 0 0 0.2rem $primary-color; 
+        box-shadow: 0 0 0 0.2rem $primary-color;
+        box-shadow: 0 0 0 0.2rem $primary-color-lch;
         outline: none;
       }
-    
- 
+
+
     }
 
     .btn {
+      background-color: $primary-color-lch;
       background-color: $primary-color;
       border: $background-color 1px solid;
       margin-top: 10%;
@@ -540,9 +580,9 @@ body:has(form) {
       font-weight: 700;
     }
 
-    .btn:hover{
+    .btn:hover {
       background-color: $background-color;
-      color:white;
+      color: white;
     }
   }
 
@@ -553,7 +593,7 @@ body:has(form) {
       }
 
       .form-check-input,
-    .form-control{
+      .form-control {
         width: 200px;
       }
     }
@@ -567,4 +607,3 @@ body:has(form) {
     }
   }
 }
-
