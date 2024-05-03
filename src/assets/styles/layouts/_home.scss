@@ -175,7 +175,7 @@ footer {
     padding-left: 2vw;
     padding-right: 2vw;
     display: flex;
-    height: 10svh;
+    height: 10dvh;
 
     .links {
       visibility: hidden;
@@ -245,7 +245,7 @@ footer {
   background-image: url(../images/cover-picture.jpg);
   background-size: cover;
   background-position: center;
-  height: 75svh;
+  height: 75dvh;
 
   display: flex;
   flex-direction: column;
@@ -253,7 +253,7 @@ footer {
 
   main {
     font-weight: 700;
-    min-height: 65svh;
+    min-height: 65dvh;
     color: white;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     text-shadow:
