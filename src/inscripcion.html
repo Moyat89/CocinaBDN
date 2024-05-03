@@ -11,18 +11,18 @@
     <include src="./views/header.html"></include>
     <main class="container">
         <h2>Apúntate!</h2>
-        <form name="inscripcion" method="POST" data-netlify="true" action="exito.html">
+        <form name="inscripcion" method="POST" data-netlify="true" action="exito.html" class="text-center">
             <div class="form-row">
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required/>
+                <input type="text" id="name" name="name" class="form-control" required/>
             </div>
             <div class="form-row">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required/>
+                <input type="email" id="email" name="email" class="form-control" required/>
             </div>
             <div class="form-row">
                 <label for="tipo_paella">Tipo de paella:</label>
-                <select id="tipo_paella" name="tipo_paella" required>
+                <select id="tipo_paella" name="tipo_paella" class="form-check-input" required>
                     <option value="" disabled selected>Elige tu tipo de paella</option>
                     <option value="val">Valenciana</option>
                     <option value="mar">Mar</option>
@@ -33,7 +33,7 @@
             </div>
             <div class="form-row">
                 <label for="dia_concurso">Día del concurso:</label>
-                <select id="dia_concurso" name="dia_concurso" required>
+                <select id="dia_concurso" name="dia_concurso" class="form-check-input" required>
                     <option value="" disabled selected>Elige tu dia</option>
                     <option value="vie">Viernes</option>
                     <option value="sat">Sábado</option>
@@ -41,7 +41,7 @@
                 </select>
             </div>
             <div class="form-row">
-                <button type="submit">Inscribirse</button>
+                <button type="submit" class="btn">Inscribirse</button>
             </div>
         </form>
 

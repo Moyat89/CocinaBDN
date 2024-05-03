@@ -1,3 +1,5 @@
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
+
 //General Selectors
 body {
   max-width: $full-width;
@@ -41,7 +43,6 @@ h1 {
 }
 
 h2 {
-  text-align: center;
   margin-bottom: $margin-size-small;
   margin-top: $margin-size-small;
   font-size: 20px;
@@ -64,6 +65,7 @@ hr{
 
 }
 
+$input-border-color: $primary-color;
 //Shared Custom Classes
 .current {
   color: $primary-color;
@@ -76,7 +78,6 @@ hr{
   * {
     flex: 1;
     margin: auto;
-    text-align: center;
   }
 }
 
@@ -166,7 +167,6 @@ footer {
   .contact-info {
     height: 14vh;
     color: white;
-    text-align: center;
     padding-top: 5%;
   }
 
@@ -175,7 +175,7 @@ footer {
     padding-left: 2vw;
     padding-right: 2vw;
     display: flex;
-    height: 10vh;
+    height: 10lvh;
 
     .links {
       visibility: hidden;
@@ -245,7 +245,7 @@ footer {
   background-image: url(../images/cover-picture.jpg);
   background-size: cover;
   background-position: center;
-  height: 75vh;
+  height: 75lvh;
 
   display: flex;
   flex-direction: column;
@@ -253,8 +253,7 @@ footer {
 
   main {
     font-weight: 700;
-    text-align: center;
-    min-height: 65vh;
+    min-height: 65lvh;
     color: white;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     text-shadow:
@@ -306,7 +305,6 @@ footer {
 
   .chefs {
     flex: 1;
-    text-align: center;
     height: auto;
 
     * {
@@ -364,7 +362,6 @@ footer {
     -2px -2px 2px rgba(0, 0, 0, 0.5),
     0 0 2px rgba(0, 0, 0, 1);
   color: white;
-  text-align: center;
   position: relative;
 
   .mascara {
@@ -417,7 +414,7 @@ footer {
 
     :first-child {
       font-size: 1.5rem;
-      text-align: center;
+
     }
 
     p:not(:first-child) {
@@ -439,14 +436,13 @@ footer {
         list-style-type: none;
         counter-reset: item;
         padding: 0;
-        text-align: center;
+
 
         li {
           counter-increment: item;
           margin-bottom: 20px;
 
           h3 {
-            text-align: center;
             font-weight: 700;
 
             &::before {
@@ -513,9 +509,7 @@ body:has(form) {
     align-items: center;
 
     * {
-      text-align: left;
       background-color: white;
-      text-align: center;
       margin-top: 2%;
     }
 
@@ -524,18 +518,31 @@ body:has(form) {
       font-weight: 700;
     }
 
-    input,
-    select {
+    .form-check-input,
+    .form-control{
       width: 75vw;
+      height: 40px;
+
+      &:focus{
+        border: $primary-color;
+        box-shadow: 0 0 0 0.2rem $primary-color; 
+        outline: none;
+      }
+    
+ 
     }
 
-    button {
+    .btn {
       background-color: $primary-color;
       border: $background-color 1px solid;
-      padding: 15px 30px 15px 30px;
       margin-top: 10%;
       margin-bottom: 10%;
       font-weight: 700;
+    }
+
+    .btn:hover{
+      background-color: $background-color;
+      color:white;
     }
   }
 
@@ -545,8 +552,8 @@ body:has(form) {
         text-align: initial;
       }
 
-      input,
-      select {
+      .form-check-input,
+    .form-control{
         width: 200px;
       }
     }
