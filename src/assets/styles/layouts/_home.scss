@@ -30,7 +30,7 @@ a {
   text-decoration: none;
   font-weight: 700;
   color: white;
-  line-height: 2;
+
 
 }
 
@@ -39,6 +39,8 @@ a:hover {
   color: $primary-color-lch;
   animation-duration: 5s;
 }
+
+
 
 a.hvr-underline-from-center::before {
   background-color: $primary-color;
@@ -98,6 +100,10 @@ $input-border-color: $primary-color-lch;
   * {
     flex: 1;
     margin: auto;
+  }
+
+  a{
+    line-height: 2;
   }
 }
 
