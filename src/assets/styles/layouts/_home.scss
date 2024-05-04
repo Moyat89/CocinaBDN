@@ -11,7 +11,10 @@ body {
 
 
 p,
-a {
+a,
+q,
+cite,
+figcaption {
   font-size: $font-size-responsive;
 
   @media(min-width: $med-dev-min-width) {
@@ -27,13 +30,23 @@ a {
   text-decoration: none;
   font-weight: 700;
   color: white;
+  line-height: 2;
 
 }
 
 a:hover {
-  color: $primary-color-lch;
   color: $primary-color;
+  color: $primary-color-lch;
+  animation-duration: 5s;
 }
+
+a.hvr-underline-from-center::before {
+  background-color: $primary-color;
+
+}
+
+
+
 
 h1 {
   font-size: 30px;
@@ -60,21 +73,22 @@ h2 {
 }
 
 hr {
-  color: $primary-color-lch;
   color: $primary-color;
+  color: $primary-color-lch;
   margin: auto;
   opacity: 1;
 
 }
 
-$input-border-color: $primary-color-lch;
 $input-border-color: $primary-color;
+$input-border-color: $primary-color-lch;
+
 
 
 //Shared Custom Classes
 .current {
-  color: $primary-color-lch;
   color: $primary-color;
+  color: $primary-color-lch;
 }
 
 .links {
@@ -88,17 +102,17 @@ $input-border-color: $primary-color;
 }
 
 //Header and Bottom
-
 //Header (top Bar)
 nav {
   padding: 0 $padding-size-small 0 $padding-size-small;
   min-height: $height-header-responsive;
   display: flex;
   background-color: $background-color;
+  background-color: $background-color-lch;
 
 
   @media(min-width: $med-dev-min-width) {
-    
+
     padding: 0 $padding-size-medium 0 $padding-size-medium;
     grid-template-columns: 2fr 0fr 2fr;
     height: max-content;
@@ -114,7 +128,7 @@ nav {
     padding-right: 10vw;
     height: 10vh;
 
-    a{
+    a {
       text-shadow: $main-txt-shadow;
 
     }
@@ -161,15 +175,26 @@ nav {
   margin: auto 0;
   color: white;
 
+  .logo {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    align-items: center;
+
+    img {
+      width: 40px;
+
+    }
+  }
+
   &:hover {
-    color: $primary-color-lch;
     color: $primary-color;
+    color: $primary-color-lch;
   }
 
 
   @media(min-width: $med-dev-min-width) {
     font-size: $font-size-med;
-
   }
 
   @media(min-width: $big-dev-min-width) {
@@ -184,6 +209,7 @@ nav {
 
 footer {
   background-color: $background-color;
+  background-color: $background-color-lch;
 
   hr {
     height: 1vh;
@@ -203,8 +229,21 @@ footer {
     display: flex;
     height: 10dvh;
 
+    .logo {
+      display: flex;
+      flex-direction: column;
+      width: 80px;
+      align-items: center;
+
+      img {
+        width: 40px;
+
+      }
+    }
+
     .links {
       visibility: hidden;
+      width: 40vw;
     }
 
 
@@ -212,6 +251,11 @@ footer {
       margin-top: auto;
       margin-bottom: auto;
       text-align: right;
+
+      * {
+        font-size: larger;
+        margin-left: 2px;
+      }
     }
   }
 
@@ -227,9 +271,12 @@ footer {
       padding-left: 0;
       padding-right: 0;
 
-
       a {
         flex: none;
+      }
+
+      .links {
+        width: initial;
       }
 
     }
@@ -249,6 +296,7 @@ footer {
       .links {
         column-gap: 50px;
         visibility: visible;
+
       }
     }
   }
@@ -257,7 +305,7 @@ footer {
 
     .nested-bar {
       display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
     }
 
   }
@@ -268,7 +316,7 @@ footer {
 //Cover Layout
 
 .cover-wrapper {
-  background-image: url(../images/cover-picture.jpg);
+  background-image: url("../images/cover-picture.jpg");
   background-size: cover;
   background-position: center;
   height: 75dvh;
@@ -276,13 +324,14 @@ footer {
   display: flex;
   flex-direction: column;
 
-  nav{
+  nav {
     @media(min-width: $med-dev-min-width) {
       background-color: transparent;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     }
 
   }
+
 
 
   main {
@@ -438,7 +487,8 @@ footer {
   margin-top: 0;
 
 
-  :where(.entradilla, section:has(ol)) * {
+  :where(.entradilla, section:has(ol)) p,
+  h3 {
     padding: 10px 20px;
   }
 
@@ -484,8 +534,9 @@ footer {
               display: inline-block;
               width: 30px;
               height: 30px;
-              background-color: $primary-color-lch;
+              //En caso de incompatibilidad
               background-color: $primary-color;
+              background-color: $primary-color-lch;
               border-radius: 50%;
               border: 2px $background-color solid;
               color: $background-color;

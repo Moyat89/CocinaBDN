@@ -2,7 +2,9 @@
  * Import dependencies from node_modules
  * see commented examples below
  */
-import * as bootstrap from 'bootstrap'
+import * as bootstrap from 'bootstrap';
+import * as hover from 'hover.css';
+
 
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
@@ -15,3 +17,5 @@ import * as bootstrap from 'bootstrap'
   const university = "UOC";
   console.log(`Hello, ${university}!`);
 } )();
+
+
