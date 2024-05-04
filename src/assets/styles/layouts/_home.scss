@@ -187,7 +187,7 @@ nav {
     width: 80px;
     align-items: center;
     max-height: 10dvh;
-    line-height:5px;
+    line-height:7px;
 
     img {
       width: 40px;
@@ -220,12 +220,12 @@ footer {
   background-color: $background-color-lch;
 
   hr {
-    height: 1vh;
+    height: 1dvh;
     visibility: hidden;
   }
 
   .contact-info {
-    height: 14vh;
+    height: 14dvh;
     color: white;
     padding-top: 5%;
   }
@@ -243,7 +243,7 @@ footer {
       width: 80px;
       align-items: center;
       max-height: 10dvh;
-      line-height:5px;
+      line-height:7px;
 
       img {
         width: 40px;
