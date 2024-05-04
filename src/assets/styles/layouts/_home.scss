@@ -217,7 +217,6 @@ nav {
 footer {
   background-color: $background-color;
   background-color: $background-color-lch;
-  padding: 0 $padding-size-small 0 $padding-size-small;
 
   hr {
     height: 1dvh;
@@ -314,7 +313,7 @@ footer {
 
     .nested-bar {
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
   }
