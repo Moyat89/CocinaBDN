@@ -1,34 +1,35 @@
-<footer>
-  <div class="contact-info text-center">
-    <p>¡Inscripciones abiertas!<br>Inscribete a través de nuestro <a href="./inscripcion.html">formulario</a> o envia un e-mail a <a href="#" target="_blank">mejorpaella@bdn.com</a> para participar</p>
+<footer class="footer">
+  <div class="footer__contact-info text-center">
+    <p class="contact__info message">¡Inscripciones abiertas!<br>Inscribete a través de nuestro <a
+        href="./inscripcion.html">formulario</a> o envia un
+      e-mail a <a href="#" target="_blank">mejorpaella@bdn.com</a> para participar</p>
   </div>
-  <hr>
-  <div class="nav-bar-bottom">
-    <div class="nested-bar">
-      <a class="navbar-brand hvr-icon-spin" href="./index.html">
-        <div class="logo">
-        <img src="./assets/images/badalona-logo.png" height="40" class="d-inline-block align-top hvr-icon">
+  <hr class="footer_spacer">
+  <nav class="footer__navbar">
+    <a class="navbar__logo hvr-icon-spin" href="./index.html">
+      <div class="logo">
+        <img src="./assets/images/badalona-logo.png" height="40" class="logo__image d-inline-block align-top hvr-icon">
         <br>
-         BadaPaellas
-        </div>
-      </a>
-    <div class="links">
-      <a href="./chefs.html"  class="hvr-underline-from-center">Maestros Paelleros</a>
-      <a href="./articulo.html"  class="hvr-underline-from-center">La Tradición</a>
-      <a href="./inscripcion.html"  class="hvr-underline-from-center">Inscripción</a>
+        <span class="logo__text">BadaPaellas</span>
+      </div>
+    </a>
+    <div class="navbar__links text-center">
+      <a href="./chefs.html" class="links__item hvr-underline-from-center">Maestros Paelleros</a>
+      <a href="./articulo.html" class="links__item hvr-underline-from-center">La Tradición</a>
+      <a href="./inscripcion.html" class="links__item hvr-underline-from-center">Inscripción</a>
     </div>
-    <div class="social-media">
-      <a href="#" title="Link a cuenta en Instagram"><i class="fa-brands fa-square-instagram hvr-grow"></i></a>
-      <a href="#" title="Link a cuenta en Twitter"><i class="fa-brands fa-twitter hvr-grow"></i></a>
-      <a href="#" title="Link a cuenta en Facebook"><i class="fa-brands fa-facebook hvr-grow"></i></a>
+    <div class="navbar__social-media">
+      <a href="#" title="Link a cuenta en Instagram"><i
+          class="social-media_item fa-brands fa-square-instagram hvr-grow"></i></a>
+      <a href="#" title="Link a cuenta en Twitter"><i class="social-media_item fa-brands fa-twitter hvr-grow"></i></a>
+      <a href="#" title="Link a cuenta en Facebook"><i class="social-media_item fa-brands fa-facebook hvr-grow"></i></a>
     </div>
-    </div>
-  </div>
+  </nav>
 </footer>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var currentPage = window.location.pathname;
-    var pages = document.querySelectorAll('.links a');
+    var pages = document.querySelectorAll('.links__item');
     pages.forEach(function (link) {
       if (link.getAttribute('href') === currentPage) {
         link.classList.add('current');

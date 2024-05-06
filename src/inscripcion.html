@@ -14,16 +14,16 @@
         <h2 class="text-center">Apúntate!</h2>
         <form name="inscripcion" method="POST" data-netlify="true" action="exito.html" class="text-center">
             <div class="form-row">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" class="form-control" required/>
+                <label for="name" class="form-label text-center ">Nombre y Apellidos:</label>
+                <input type="text" id="name" name="name" class="form-control rounded-pill text-center" minlength="3" required/>
             </div>
             <div class="form-row">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control" required/>
+                <label for="email" class="form-label text-center ">E-mail:</label>
+                <input type="email" id="email" name="email" class="form-control rounded-pill text-center" required/>
             </div>
             <div class="form-row">
-                <label for="tipo_paella">Tipo de paella:</label>
-                <select id="tipo_paella" name="tipo_paella" class="form-check-input" required>
+                <label for="tipo_paella" class="form-label text-center ">Tipo de paella:</label>
+                <select id="tipo_paella" name="tipo_paella" class="form-check-input rounded-pill text-center" required>
                     <option value="" disabled selected>Elige tu tipo de paella</option>
                     <option value="val">Valenciana</option>
                     <option value="mar">Mar</option>
@@ -33,8 +33,8 @@
                 </select>
             </div>
             <div class="form-row">
-                <label for="dia_concurso">Día del concurso:</label>
-                <select id="dia_concurso" name="dia_concurso" class="form-check-input" required>
+                <label for="dia_concurso" class="form-label text-center ">Día del concurso:</label>
+                <select id="dia_concurso" name="dia_concurso" class="form-check-input rounded-pill text-center" required>
                     <option value="" disabled selected>Elige tu dia</option>
                     <option value="vie">Viernes</option>
                     <option value="sat">Sábado</option>

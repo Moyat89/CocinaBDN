@@ -1,0 +1,4 @@
+//Funciones
+@function tamaño-fuente-escalable($tamaño-base, $factor-escala) {
+    @return $tamaño-base * $factor-escala;
+  }
