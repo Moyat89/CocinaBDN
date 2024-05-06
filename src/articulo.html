@@ -12,34 +12,38 @@
 <body>
     <include src="./views/header.html"></include>
     <figure class="cabecera-articulo">
-        <div class="mascara text-center">
-            <h1>Una tradición de nuestra ciudad</h1>
-            <p class="author">Por Teo Alarcón Moya</p>
+        <div class="cabecera-articulo__mascara text-center">
+            <h1 class="mascara__titular">Una tradición de nuestra ciudad</h1>
+            <p class="mascara__author">Por Teo Alarcón Moya</p>
         </div>
     </figure>
     <main class="container">
-        <article class="articulo">
-            <section class="entradilla text-center">
-                <p>Una celebración culinaria que fusiona tradición, creatividad y pasión en cada bocado</p>
-                <p>El concurso de paellas en Badalona tiene sus raíces en la rica tradición culinaria de la región y en
+        <article class="container__articulo">
+            <section class="articulo__section text-center">
+                <p class="section__text">Una celebración culinaria que fusiona tradición, creatividad y pasión en
+                    cada bocado</p>
+                <p class="section__text">El concurso de paellas en Badalona tiene sus raíces en la rica tradición
+                    culinaria de la región y en
                     el espíritu comunitario que caracteriza a esta ciudad costera de Cataluña. Badalona, situada en la
                     provincia de Barcelona, es conocida por su amor por la buena comida y por preservar las recetas
                     tradicionales que han pasado de generación en generación.</p>
             </section>
             <hr>
-            <section class="lista text-center">
-                <ol>
-                    <li>
-                        <h3>El origen</h3>
-                        <p>El origen del concurso de paellas probablemente se remonta a encuentros informales entre
+            <section class="articulo__section text-center">
+                <ol class="section__list">
+                    <li class="list__item">
+                        <h3 class="item__h3">El origen</h3>
+                        <p class="item__text">El origen del concurso de paellas probablemente se remonta a encuentros
+                            informales entre
                             amigos y vecinos, donde se compartían secretos de cocina y se debatía sobre quién hacía la
                             mejor paella. Con el tiempo, este intercambio culinario se formalizó en un evento anual que
                             reúne a aficionados y profesionales de la cocina en un ambiente festivo y de camaradería.
                         </p>
                     </li>
-                    <li>
-                        <h3>El ahora</h3>
-                        <p>El concurso anual de paellas en Badalona es un evento emblemático que reúne a la comunidad en
+                    <li class="list__item">
+                        <h3 class="item__h3">El ahora</h3>
+                        <p class="item__text">El concurso anual de paellas en Badalona es un evento emblemático que
+                            reúne a la comunidad en
                             torno a una de las tradiciones culinarias más queridas de la región. Durante este vibrante
                             festival gastronómico, tanto aficionados como expertos en la cocina se unen para competir y
                             deleitar a los asistentes con sus habilidades culinarias, preparando algunas de las paellas
@@ -49,9 +53,10 @@
                             igual.
                         </p>
                     </li>
-                    <li>
-                        <h3>El futuro</h3>
-                        <p>El futuro del concurso de paellas en Badalona promete seguir siendo brillante y emocionante.
+                    <li class="list__item">
+                        <h3 class="item__h3">El futuro</h3>
+                        <p class="item__text">El futuro del concurso de paellas en Badalona promete seguir siendo
+                            brillante y emocionante.
                             A medida que la ciudad continúa creciendo y desarrollándose, este evento gastronómico
                             emblemático seguramente evolucionará con ella. Se espera que el concurso atraiga a un número
                             cada vez mayor de participantes y espectadores, tanto locales como de otras partes del
@@ -61,11 +66,35 @@
                 </ol>
             </section>
             <hr>
-            <section class="cuerpo">
-
-                <h2 class="text-center">El concurso de paellas en Badalona: una celebración culinaria que fusiona
+            <section class="articulo__section">
+                <h2 class="section__h2 text-center">El concurso de paellas en Badalona: una celebración culinaria que
+                    fusiona
                     tradición, creatividad y pasión en cada bocado</h2>
-                <p>El concurso de paellas en Badalona es un evento culinario único que fusiona la tradición gastronómica
+                <blockquote class="section__blockquote">
+                    <p class="blockquote__text">¡Bienvenidos a la celebración anual del sabor en el corazón de Badalona!
+                        Prepárate
+                        para deleitar tus sentidos con el aroma tentador de las paellas recién cocinadas y la atmósfera
+                        vibrante de nuestro concurso.</p>
+                    <p class="blockquote__text">En este día especial, los maestros culinarios locales competirán entre
+                        sí para
+                        presentar la paella más exquisita y auténtica. Desde la elección de los ingredientes frescos
+                        hasta la cuidadosa preparación de cada grano de arroz, cada detalle cuenta en la búsqueda de la
+                        paella perfecta.</p>
+                    <p class="blockquote__text">Pero el concurso no se trata solo de la competencia, sino también de la
+                        comunidad.
+                        Es un momento para reunirse con amigos y familiares, compartir risas y crear recuerdos duraderos
+                        mientras disfrutas de la deliciosa comida y la música festiva.</p>
+                    <p class="blockquote__text">¡No te pierdas la oportunidad de unirte a nosotros en esta fiesta
+                        gastronómica
+                        única! Únete a la diversión, sumérgete en la cultura local y saborea cada bocado de la
+                        experiencia del concurso de paellas de Badalona.</p>
+                    <footer class="blockquote__footer">Equipo de BadaPaellas</footer>
+                </blockquote>
+            </section>
+            <section class="articulo__section">
+
+                <p class="section__text">Con estas palabras del equipo de BadaPaellas, podemos deducir que el concurso de paellas en Badalona es un evento culinario único que fusiona la
+                    tradición gastronómica
                     con la emoción de la competencia. Durante este vibrante encuentro, los participantes, ya sean
                     cocineros aficionados o expertos en la materia, se reúnen para demostrar sus habilidades culinarias
                     y creatividad en la elaboración de este plato emblemático.
@@ -75,17 +104,19 @@
                     culinarias. Desde los clásicos mariscos hasta las variantes más innovadoras con ingredientes
                     locales, cada paella es una expresión única del talento y la visión de su creador.</p>
 
-                <figure>
-                    <img src="./assets/images/articulo-2.jpg" alt="Escultura del anís del mono">
-                    <figcaption class="text-center">El mono de <cite>Anís del mono</cite>, uno de los símbolos
+                <figure class="section__figure">
+                    <img class="figure__img" src="./assets/images/articulo-2.jpg" alt="Escultura del anís del mono">
+                    <figcaption class="figure__caption text-center">El mono de <cite class="caption__cite">Anís del
+                            mono</cite>, uno de los símbolos
                         principales de
                         Badalona</figcaption>
                 </figure>
-                <p>Como dijo una vez el renombrado chef francés <cite>Alain Ducasse</cite>:</p>
-                <q>
+                <p class="section__text">Como dijo una vez el renombrado chef francés <cite class="text__cite">Alain
+                        Ducasse</cite>:</p>
+                <q class="section__quote">
                     La excelencia está en la diversidad y el modo de progresar es conocer y comparar las diversidades
                     de productos, culturas y técnicas.</q>
-                <p>Esta cita encapsula la esencia del
+                <p class="section__text">Esta cita encapsula la esencia del
                     concurso de paellas en Badalona, donde la pasión por la cocina se combina con el orgullo por las
                     raíces locales para crear un evento que celebra la diversidad, la creatividad y, sobre todo, el
                     amor por la buena comida.

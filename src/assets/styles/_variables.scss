@@ -6,13 +6,21 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 // Colores principales de la web
-$primary-color-lch : lch(82% 89 93);
 $primary-color: #e2cc00;
-$background-color-lch: lch(5.06% 0 0); 
+$primary-color-lch : lch(82% 89 93);
 $background-color: #111111;
-$main-txt-shadow:  2px 2px 2px rgba(0, 0, 0, 0.5),
--2px -2px 2px rgba(0, 0, 0, 0.5),
-0 0 2px rgba(0, 0, 0, 1);
+$background-color-lch: lch(5.06% 0 0); 
+$main-txt-shadow-lch:  2px 2px 2px lch(0% 0 0 / 50%),
+-2px -2px 2px lch(0% 0 0 / 50%),
+0 0 2px lch(0% 0 0 / 50%);
+$main-txt-shadow:  2px 2px 2px #00000080,
+-2px -2px 2px #00000080,
+0 0 2px #00000080;
+$white-lch:lch(100% 0 0);
+$white:rgb(255, 255, 255);
+
+
+
 // Tamaños de la fuente para la versión para móviles
 $font-size-responsive: 1rem;
 
@@ -20,8 +28,8 @@ $font-size-responsive: 1rem;
 $margin-size-small: 10px;
 $margin-size-medium: 20px;
 $margin-auto: auto 0;
-$padding-size-small: 2vw;
-$padding-size-medium: 1vw;
+$padding-size-small: 2dvw;
+$padding-size-medium: 1dvw;
 
 
 // Border standard a utilizar
@@ -29,7 +37,7 @@ $standard-border: $primary-color solid 2px;
 
 // Tamaños generales
 $full-height: 100dvh;
-$full-width: 100vw;
+$full-width: 100dvw;
 $height-header-responsive: 10dvh;
 $height-nav-big: $height-header-responsive - 10dvh;
 $med-dev-min-width: 571px;
