@@ -1,0 +1,48 @@
+//Chefts.html layout
+.tabla--chef {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    container-type: inline-size;
+  
+    .row {
+      &__chef {
+        flex: 1;
+        height: auto;
+  
+        >* {
+          margin-top: 20px;
+        }
+  
+        .chef__name {
+          font-weight: bold;
+        }
+  
+        .chef__image {
+          width: 80dvw;
+          border: $standard-border;
+        }
+      }
+    }
+  
+    @container (min-width: #{$big-dev-min-width}) {
+  
+      .row {
+        display: flex;
+  
+        &__chef {
+          flex: 1;
+          padding: 20px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+  
+          .chef__image {
+            width: 100%;
+            border: $standard-border;
+          }
+        }
+      }
+  
+    }
+  }
+  

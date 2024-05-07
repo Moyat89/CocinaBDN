@@ -1,8 +1,4 @@
 @use "sass:color";
-
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 // Colores principales de la web
@@ -16,10 +12,8 @@ $main-txt-shadow-lch:  2px 2px 2px lch(0% 0 0 / 50%),
 $main-txt-shadow:  2px 2px 2px #00000080,
 -2px -2px 2px #00000080,
 0 0 2px #00000080;
+$white:#ffffff;
 $white-lch:lch(100% 0 0);
-$white:rgb(255, 255, 255);
-
-
 
 // Tamaños de la fuente para la versión para móviles
 $font-size-responsive: 1rem;
@@ -27,19 +21,15 @@ $font-size-responsive: 1rem;
 //Márgenes
 $margin-size-small: 10px;
 $margin-size-medium: 20px;
-$margin-auto: auto 0;
 $padding-size-small: 2dvw;
 $padding-size-medium: 1dvw;
 
-
-// Border standard a utilizar
+// Borde standard a utilizar
 $standard-border: $primary-color solid 2px;
 
 // Tamaños generales
-$full-height: 100dvh;
 $full-width: 100dvw;
 $height-header-responsive: 10dvh;
-$height-nav-big: $height-header-responsive - 10dvh;
 $med-dev-min-width: 571px;
-$big-dev-min-width: 992px;
+$big-dev-min-width: 1024px;
 

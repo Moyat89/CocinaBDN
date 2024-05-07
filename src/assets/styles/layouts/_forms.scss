@@ -1,0 +1,99 @@
+//Inscripcion Layout
+body:has(.form) {
+    display: grid;
+  
+    :where(form.form-row) label,
+    select,
+    input {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .container {
+      min-height: 65dvh;
+  
+      .custom-list-group {
+        border: $standard-border;
+  
+        .list-group-item {
+          display: flex;
+          flex-direction: column;
+          border: none;
+  
+          &__tenet {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .form-label {
+        display: block;
+        font-weight: bold;
+      }
+  
+      .form-check-input,
+      .form-control {
+        width: 75dvw;
+        height: 40px;
+  
+        &:has(option) {
+          font-size: smaller;
+        }
+  
+        &:focus {
+          border: $primary-color-lch;
+          border: $primary-color;
+          outline: none;
+          box-shadow: 0 0 0 0.2rem $primary-color;
+          box-shadow: 0 0 0 0.2rem $primary-color-lch;
+        }
+  
+      }
+  
+      .btn {
+        margin-top: 10px;
+        font-weight: 700;
+        background-color: $primary-color-lch;
+        background-color: $primary-color;
+        border: $background-color 1px solid;
+  
+      }
+  
+      .btn:hover {
+        color: $white;
+        color: $white-lch;
+        background-color: $background-color;
+      }
+    }
+  
+    @media(min-width: $med-dev-min-width) {
+      .form {
+        * {
+          text-align: initial;
+        }
+  
+        .form-check-input,
+        .form-control {
+          width: 300px;
+        }
+      }
+    }
+  
+    @media(min-width: $big-dev-min-width) {
+  
+      footer {
+        width: 100%;
+  
+      }
+    }
+  }
+  
+  body:has(.container--full) {
+    overflow: hidden;
+  }

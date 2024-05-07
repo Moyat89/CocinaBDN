@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -12,52 +12,64 @@
 <body>
     <include src="./views/header.html"></include>
     <main class="container">
-        <h2 class="text-center">Apúntate!</h2>
-        <h3 class="text-center">Condiciones</h3>
+        <h2 class="container__titular text-center">Apúntate!</h2>
+        <h3 class="container__subtitle text-center">Condiciones</h3>
         <ol class="list-group custom-list-group text-center">
-            <li class="list-group-item"><span>Autenticidad</span>Las paellas deben seguir la receta tradicional española, utilizando ingredientes auténticos y técnicas de preparación fieles a la tradición.</li>
-            <li class="list-group-item"><span>Creatividad</span>Se anima a los participantes a agregar su toque personal a la paella, ya sea a través de ingredientes inesperados o presentaciones innovadoras, siempre respetando la esencia del plato.</li>
-            <li class="list-group-item"><span>Calidad de los ingredientes</span>Se valora el uso de ingredientes frescos, locales y de alta calidad en la elaboración de la paella.</li>
-            <li class="list-group-item"><span>Textura y consistencia</span> Se busca una paella con el punto de cocción perfecto, donde el arroz esté tierno pero no pasado, y la textura sea uniforme en todo el plato.</li>
-            <li class="list-group-item"><span>Presentación visual</span> Se presta atención a la presentación estética de la paella en el plato, valorando la creatividad en la disposición de los ingredientes y la atención al detalle.</li>
-            <li class="list-group-item"><span>Higiene y seguridad alimentaria</span> Los participantes deben seguir prácticas seguras de manipulación de alimentos y mantener una cocina limpia y ordenada durante todo el proceso de preparación.</li>
-            <li class="list-group-item"><span>Espíritu deportivo</span> Se espera que los participantes mantengan un comportamiento amistoso y respetuoso durante el concurso, fomentando un ambiente de camaradería y colaboración entre todos los concursantes.</li>
+            <li class="list-group-item"><span class="list-group-item__tenet">Autenticidad</span>Las paellas deben seguir la receta tradicional
+                española, utilizando ingredientes auténticos y técnicas de preparación fieles a la tradición.</li>
+            <li class="list-group-item"><span class="list-group-item__tenet">Creatividad</span>Se anima a los participantes a agregar su toque personal
+                a la paella, ya sea a través de ingredientes inesperados o presentaciones innovadoras, siempre
+                respetando la esencia del plato.</li>
+            <li class="list-group-item"><span class="list-group-item__tenet">Calidad de los ingredientes</span>Se valora el uso de ingredientes
+                frescos, locales y de alta calidad en la elaboración de la paella.</li>
+            <li class="list-group-item"><span class="list-group-item__tenet">Textura y consistencia</span> Se busca una paella con el punto de cocción
+                perfecto, donde el arroz esté tierno pero no pasado, y la textura sea uniforme en todo el plato.</li>
+            <li class="list-group-item"><span class="list-group-item__tenet">Presentación visual</span> Se presta atención a la presentación estética
+                de la paella en el plato, valorando la creatividad en la disposición de los ingredientes y la atención
+                al detalle.</li>
+            <li class="list-group-item"><span class="list-group-item__tenet">Higiene y seguridad alimentaria</span> Los participantes deben seguir
+                prácticas seguras de manipulación de alimentos y mantener una cocina limpia y ordenada durante todo el
+                proceso de preparación.</li>
+            <li class="list-group-item"><span class="list-group-item__tenet">Espíritu deportivo</span> Se espera que los participantes mantengan un
+                comportamiento amistoso y respetuoso durante el concurso, fomentando un ambiente de camaradería y
+                colaboración entre todos los concursantes.</li>
         </ol>
-        <form name="inscripcion" method="POST" data-netlify="true" action="exito.html" class="text-center">
+        <form name="inscripcion" method="POST" data-netlify="true" action="exito.html"
+            class="form text-center">
             <div class="form-row">
                 <label for="name" class="form-label text-center ">Nombre y Apellidos:</label>
                 <input type="text" id="name" name="name" class="form-control rounded-pill text-center" minlength="3"
-                    required />
+                    required>
             </div>
             <div class="form-row">
                 <label for="email" class="form-label text-center ">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control rounded-pill text-center" required />
+                <input type="email" id="email" name="email" class="form-control rounded-pill text-center" required>
             </div>
             <div class="form-row">
                 <label for="tipo_paella" class="form-label text-center ">Tipo de paella:</label>
                 <select id="tipo_paella" name="tipo_paella" class="form-check-input rounded-pill text-center" required>
-                    <option value="" disabled selected>Elige tu tipo de paella</option>
-                    <option value="val">Valenciana</option>
-                    <option value="mar">Mar</option>
-                    <option value="mon">Montaña</option>
-                    <option value="mixta">Mixta</option>
-                    <option value="otra">Otra</option>
+                    <option class="form-option" value="" disabled selected>Elige tu tipo de paella</option>
+                    <option class="form-option" value="val">Valenciana</option>
+                    <option class="form-option" value="mar">Mar</option>
+                    <option class="form-option" value="mon">Montaña</option>
+                    <option class="form-option" value="mixta">Mixta</option>
+                    <option class="form-option" value="otra">Otra</option>
                 </select>
             </div>
             <div class="form-row">
                 <label for="dia_concurso" class="form-label text-center ">Día del concurso:</label>
                 <select id="dia_concurso" name="dia_concurso" class="form-check-input rounded-pill text-center"
                     required>
-                    <option value="" disabled selected>Elige tu dia</option>
-                    <option value="vie">Viernes</option>
-                    <option value="sat">Sábado</option>
-                    <option value="dom">Domingo</option>
+                    <option class="form-option" value="" disabled selected>Elige tu dia</option>
+                    <option class="form-option" value="vie">Viernes</option>
+                    <option class="form-option" value="sat">Sábado</option>
+                    <option class="form-option" value="dom">Domingo</option>
                 </select>
             </div>
             <div class="form-row">
                 <input type="checkbox" class="form-check-input-sm" id="acceptTerms" required>
                 <label class="form-check-label" for="acceptTerms">Acepto los términos y condiciones</label>
-              </div>
+            </div>
             <div class="form-row">
                 <button type="submit" class="btn">Inscribirse</button>
             </div>

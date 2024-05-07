@@ -1,0 +1,119 @@
+
+//Articulo Layout
+.cabecera-articulo {
+    position: relative;
+    width: 100%;
+    height: 30dvh;
+    color: $white;
+    color: $white-lch;
+    text-shadow: $main-txt-shadow;
+    text-shadow: $main-txt-shadow-lch;
+    background-image: url(../images/articulo-1.jpg);
+    background-size: cover;
+  
+    .mascara {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  
+      &__titular {
+        margin: auto;
+      }
+  
+      &__author {
+        margin: auto;
+  
+      }
+    }
+  
+    @media (min-width: $med-dev-min-width) {
+      max-height: 50dvh;
+    }
+  }
+  
+  .container__articulo {
+    container-type: inline-size;
+  
+    :where(section) p,
+    li,
+    figure {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  
+    :is(section:last-child) p:last-child {
+      margin-bottom: 60px;
+    }
+  
+    .section {
+      margin: 1dvh auto;
+  
+      &:has(blockquote) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+  
+      &:has(.section__list) {
+        .section__list {
+          padding: 0 5dvw;
+          list-style-type: none;
+          counter-reset: item;
+  
+          .item {
+            counter-increment: item;
+  
+            &__header {
+              font-weight: 700;
+  
+              &::before {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+                font-size: 18px;
+                line-height: 30px;
+                color: $background-color;
+                text-align: center;
+                content: counter(item);
+                background-color: $primary-color;
+                background-color: $primary-color-lch;
+                border: 2px $background-color solid;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+  
+    }
+  
+    section:first-child {
+      display: grid;
+      grid-template-rows: 1fr 1.5fr;
+  
+      :first-child {
+        font-size: 1.5rem;
+  
+      }
+  
+      @media screen and (min-width: $med-dev-min-width) {
+        grid-template-rows: 1fr 0fr;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+      }
+    }
+  
+    @container(min-width: #{$big-dev-min-width}) {
+  
+      :is(.item) .item__header,
+      .item__text {
+        text-align: left;
+      }
+  
+      .figure__img {
+        width: 120%;
+        margin-left: -10%;
+      }
+    }
+  }

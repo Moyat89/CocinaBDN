@@ -1,0 +1,45 @@
+//Cover Layout
+.container--full {
+  display: flex;
+  flex-direction: column;
+  height: 75dvh;
+  background-image: url("../images/cover-picture.jpg");
+  background-position: center;
+  background-size: cover;
+  container-type: size;
+
+  @container (min-width: #{$med-dev-min-width}) {
+    .navbar {
+      background-color: transparent;
+    }
+  }
+
+  .content {
+    min-height: 65dvh;
+    font-weight: 700;
+    color: $white;
+    color: $white-lch;
+    text-shadow: $main-txt-shadow-lch;
+    text-shadow: $main-txt-shadow;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+
+    &__title {
+      padding-top: 20dvh;
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    .content {
+      display: grid;
+      grid-template-rows: 0% 40% 20% 10%;
+
+      &__title {
+        padding-top: initial;
+      }
+    }
+  }
+}
+
